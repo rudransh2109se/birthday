@@ -229,6 +229,13 @@ body {
   pointer-events: none;
   z-index: 3;
 }
+html, body {
+  height: auto !important;
+  min-height: 100%;
+  overflow-y: auto !important;
+  overflow-x: hidden;
+}
+
 
 .heart { position: absolute; width: 40px; opacity: 0.6; animation: floatUp 8s linear infinite; }
 .h1 { left: 20%; animation-duration: 7s; }
