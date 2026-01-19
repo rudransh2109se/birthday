@@ -159,10 +159,12 @@ body {
 .final-header {
   position: relative;
   width: 100%;
+  max-width: 900px;
+  margin: 40px auto 20px auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  text-align: center;
 }
 
 .final-header h1 {
@@ -178,10 +180,19 @@ body {
   height: 80px;
   border-radius: 50%;
   object-fit: cover;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.top-photo.left { position: absolute; left: 20px; top: 0; }
-.top-photo.right { position: absolute; right: 20px; top: 0; }
+.top-photo.left {
+  left: -100px;
+}
+
+.top-photo.right {
+  right: -100px;
+}
+
 
 .final-paragraph {
   max-width: 800px;
