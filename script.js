@@ -1,5 +1,5 @@
 // Countdown
-const targetDate = new Date("January 19, 2026 21:06:00").getTime();
+const targetDate = new Date("January 19, 2026 21:08:00").getTime();
 const countdownEl = document.getElementById("countdown");
 const countdownContainer = document.getElementById("countdown-container");
 const birthdayMsg = document.getElementById("birthday-message");
