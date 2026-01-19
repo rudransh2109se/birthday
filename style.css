@@ -257,4 +257,22 @@ html, body {
   margin-right: auto !important;
   float: none !important;
 }
+/* ===== FINAL PAGE RESET (ABSOLUTE FIX) ===== */
+body {
+  display: block !important;
+  justify-content: unset !important;
+  align-items: unset !important;
+  flex-direction: unset !important;
+
+  margin: 0 auto;
+  padding: 0;
+}
+
+.final-header,
+.final-paragraph {
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
 
