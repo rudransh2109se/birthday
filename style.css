@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400&display=swap');
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #ffe0ec, #fff5f8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.content {
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  color: #c63b6f;
+}
+
+#countdown {
+  font-size: 2rem;
+  color: #7a2e43;
+}
+
+.cute {
+  width: 120px;
+}
+
+.left { transform: rotate(-5deg); }
+.right { transform: rotate(5deg); }
+
+.hearts::before {
+  content: "❤ ❤ ❤ ❤ ❤";
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 100%;
+  opacity: 0.15;
+  animation: float 12s linear infinite;
+}
+
+@keyframes float {
+  from { transform: translateY(0); }
+  to { transform: translateY(-120vh); }
+}
