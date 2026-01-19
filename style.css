@@ -4,17 +4,18 @@ body {
   margin: 0;
   height: 100vh;
   background: linear-gradient(135deg, #ffe0ec, #fff5f8);
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Poppins', sans-serif;
-  overflow: hidden;
 }
 
 .container {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
+  z-index: 2;
 }
 
 .content {
@@ -24,6 +25,8 @@ body {
 h1 {
   font-family: 'Pacifico', cursive;
   color: #c63b6f;
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
 #countdown {
@@ -31,24 +34,56 @@ h1 {
   color: #7a2e43;
 }
 
+.date {
+  font-size: 0.9rem;
+  color: #9a5a6b;
+  margin-top: 5px;
+}
+
 .cute {
   width: 120px;
+  animation: bounce 2s infinite;
 }
 
-.left { transform: rotate(-5deg); }
-.right { transform: rotate(5deg); }
+.panda { animation-delay: 0s; }
+.teddy { animation-delay: 0.5s; }
 
-.hearts::before {
-  content: "❤ ❤ ❤ ❤ ❤";
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Floating hearts animation */
+.floating-hearts {
   position: absolute;
   width: 100%;
-  text-align: center;
-  top: 100%;
-  opacity: 0.15;
-  animation: float 12s linear infinite;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 1;
 }
 
-@keyframes float {
-  from { transform: translateY(0); }
-  to { transform: translateY(-120vh); }
+.heart {
+  position: absolute;
+  width: 40px;
+  opacity: 0.6;
+  animation: floatUp 8s linear infinite;
 }
+
+.h1 { left: 20%; animation-duration: 7s; }
+.h2 { left: 50%; animation-duration: 9s; }
+.h3 { left: 80%; animation-duration: 6s; }
+
+@keyframes floatUp {
+  0% { transform: translateY(100vh) scale(0.8); opacity:0.6; }
+  50% { opacity: 1; }
+  100% { transform: translateY(-20vh) scale(1); opacity:0; }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .container { flex-direction: column; }
+  .cute { width: 90px; }
+}
+
