@@ -94,6 +94,11 @@ h1 {
   font-family: 'Pacifico', cursive;
   position: absolute;
   top: 30%;
+body {
+  overflow-y: auto; /* allow vertical scrolling */
+  height: auto;
+}
+
   width: 100%;
   z-index: 5;
 }
