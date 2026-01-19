@@ -215,24 +215,22 @@ body {
 
 /* Balloon style */
 .balloon {
-  position: absolute;
+  position: fixed;
   bottom: -100px;
-  width: 50px;
-  animation: floatUp 5s linear forwards;
-  transform-origin: bottom center;
+  animation: flyUp linear forwards;
+  z-index: 1;
 }
 
-@keyframes floatUp {
-  0% {
-    transform: translateX(0) translateY(0);
+@keyframes flyUp {
+  from {
+    transform: translateY(0);
     opacity: 1;
   }
-  100% {
-    transform: translateX(-30px) translateY(-100vh);
+  to {
+    transform: translateY(-120vh);
     opacity: 0;
   }
 }
-
 
 /* Floating hearts (reuse from previous page) */
 .floating-hearts {
