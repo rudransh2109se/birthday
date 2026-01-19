@@ -249,3 +249,12 @@ html, body {
 .h1 { left: 20%; animation-duration: 7s; }
 .h2 { left: 50%; animation-duration: 9s; }
 .h3 { left: 80%; animation-duration: 6s; }
+/* === FINAL PAGE HARD RESET === */
+.final-header,
+.final-paragraph {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  float: none !important;
+}
+
