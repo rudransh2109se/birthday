@@ -197,13 +197,10 @@ body {
 .final-paragraph {
   max-width: 800px;
   margin: 40px auto;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: #7a2e43;
-  position: relative;
-  z-index: 2;
+  padding: 0 20px;
+  text-align: left;
 }
+
 
 /* Balloons container */
 #balloons-container {
