@@ -2,10 +2,10 @@
 
 body {
   margin: 0;
-  height: 100vh;
+  height: auto;
   background: linear-gradient(135deg, #ffe0ec, #fff5f8);
   font-family: 'Poppins', sans-serif;
-  overflow: hidden;
+  overflow: auto;
   display: flex;
   justify-content: center;
   align-items: center;
