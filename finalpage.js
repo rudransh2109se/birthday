@@ -5,7 +5,7 @@ function createBalloons(count) {
     const balloon = document.createElement('div');
     balloon.classList.add('balloon');
     balloon.style.left = Math.random() * 90 + 'vw';
-    balloon.style.backgroundImage = 'url("balloon.png")'; // free balloon image
+    balloon.style.backgroundImage = "balloon.png"; // free balloon image
     balloon.style.backgroundSize = 'contain';
     balloon.style.backgroundRepeat = 'no-repeat';
     balloon.style.width = '50px';
