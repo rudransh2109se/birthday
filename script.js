@@ -1,12 +1,17 @@
 // Countdown
 const targetDate = new Date("February 11, 2026 00:00:00").getTime();
 const countdownEl = document.getElementById("countdown");
-setInterval(() => {
+const countdownContainer = document.getElementById("countdown-container");
+const birthdayMsg = document.getElementById("birthday-message");
+
+const timer = setInterval(() => {
   const now = new Date().getTime();
   const diff = targetDate - now;
 
   if (diff <= 0) {
-    countdownEl.innerHTML = "Happy Birthday ❤️";
+    clearInterval(timer);
+    countdownContainer.style.display = "none"; // hide countdown
+    birthdayMsg.style.display = "block"; // show birthday message
     return;
   }
 
@@ -32,3 +37,7 @@ setInterval(() => {
   flirtyEl.innerText = texts[i];
 }, 4000);
 
+// Surprise Button Click
+document.getElementById("surprise-btn").addEventListener("click", () => {
+  window.location.href = "password.html"; // go to password page
+});
