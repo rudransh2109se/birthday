@@ -1,3 +1,4 @@
+alert("FINAL PAGE JS LOADED");
 // Balloon pop-up function
 function createBalloons(count) {
   const container = document.getElementById("balloons-container");
