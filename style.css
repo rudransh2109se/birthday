@@ -360,12 +360,14 @@ html, body {
 /* HEART TEST */
 .heart {
   position: fixed;
-  bottom: -40px;
-  left: 50%;
-  font-size: 30px;
-  animation: floatUp 6s linear forwards;
+  bottom: -30px;
+  font-size: 28px;
+  animation-name: floatUp;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
   z-index: 9999;
 }
+
 
 @keyframes floatUp {
   from {
