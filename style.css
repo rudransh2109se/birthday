@@ -381,3 +381,13 @@ body {
   left: 0 !important;
   right: 0 !important;
 }
+@keyframes moveUp {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-120vh);
+    opacity: 0;
+  }
+}
