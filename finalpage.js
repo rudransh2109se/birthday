@@ -25,34 +25,23 @@ window.onload = () => {
   createBalloons(20);
   setInterval(() => createBalloons(5), 3000);
 };
-
 window.onload = function () {
 
-  const heart = document.createElement("div");
-  heart.innerHTML = "❤️";
-  heart.style.position = "absolute";
-  heart.style.bottom = "-40px";
-  heart.style.left = "50%";
-  heart.style.fontSize = "40px";
-  heart.style.zIndex = "999999";
+  function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "❤️";
 
-  // attach DIRECTLY to <html>, not body
-  document.documentElement.appendChild(heart);
+    const x = Math.random() * window.innerWidth;
+    heart.style.left = x + "px";
+    heart.style.animationDuration = (6 + Math.random() * 4) + "s";
 
-  let pos = -40;
+    document.body.appendChild(heart);
 
-  function move() {
-    pos += 2;
-    heart.style.bottom = pos + "px";
-
-    if (pos < window.innerHeight + 50) {
-      requestAnimationFrame(move);
-    } else {
-      heart.remove();
-    }
+    setTimeout(() => heart.remove(), 12000);
   }
 
-  move();
-};
+  setInterval(createHeart, 500);
 
+};
 
