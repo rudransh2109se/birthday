@@ -77,17 +77,13 @@ h1 {
 .heart {
   position: fixed;
   bottom: -30px;
-  font-size: 26px;
+  font-size: 22px;          /* small cute hearts */
+  pointer-events: none;
   animation-name: floatUp;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
-  z-index: 5;
+  z-index: 9999;
 }
-
-
-.h1 { left: 20%; animation-duration: 7s; }
-.h2 { left: 50%; animation-duration: 9s; }
-.h3 { left: 80%; animation-duration: 6s; }
 
 @keyframes floatUp {
   from {
@@ -99,6 +95,14 @@ h1 {
     opacity: 0;
   }
 }
+
+
+
+.h1 { left: 20%; animation-duration: 7s; }
+.h2 { left: 50%; animation-duration: 9s; }
+.h3 { left: 80%; animation-duration: 6s; }
+
+
 
 
 /* Mobile */
