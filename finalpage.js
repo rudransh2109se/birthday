@@ -30,14 +30,24 @@ window.onload = function () {
 
   const heart = document.createElement("div");
   heart.innerHTML = "❤️";
-
   heart.style.position = "fixed";
   heart.style.bottom = "-40px";
   heart.style.left = "50%";
   heart.style.fontSize = "40px";
-  heart.style.animation = "moveUp 6s linear forwards";
   heart.style.zIndex = "9999";
 
   document.body.appendChild(heart);
 
+  let pos = -40;
+
+  const anim = setInterval(() => {
+    pos += 3;                 // move up
+    heart.style.bottom = pos + "px";
+
+    if (pos > window.innerHeight) {
+      clearInterval(anim);
+      heart.remove();
+    }
+  }, 16); // ~60fps
 };
+
