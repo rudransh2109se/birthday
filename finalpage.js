@@ -28,23 +28,16 @@ window.onload = () => {
 
 window.onload = function () {
 
-  function createHeart() {
-    const heart = document.createElement("div");
-    heart.className = "heart";
-    heart.innerHTML = "❤️";
+  const heart = document.createElement("div");
+  heart.innerHTML = "❤️";
 
-    const x = Math.random() * window.innerWidth;
-    heart.style.left = x + "px";
-    heart.style.animationDuration = (6 + Math.random() * 4) + "s";
+  heart.style.position = "fixed";
+  heart.style.bottom = "-40px";
+  heart.style.left = "50%";
+  heart.style.fontSize = "40px";
+  heart.style.animation = "moveUp 6s linear forwards";
+  heart.style.zIndex = "9999";
 
-    document.body.appendChild(heart);
-
-    setTimeout(() => {
-      heart.remove();
-    }, 12000);
-  }
-
-  // start continuous hearts
-  setInterval(createHeart, 500);
+  document.body.appendChild(heart);
 
 };
