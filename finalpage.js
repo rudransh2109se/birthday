@@ -30,20 +30,22 @@ function createHeart() {
   heart.className = "heart";
   heart.innerHTML = "❤️";
 
-  // random horizontal position
-  heart.style.left = Math.random() * 100 + "vw";
+  // TRUE random across full screen width
+  const x = Math.random() * window.innerWidth;
+  heart.style.left = x + "px";
 
-  // random speed
-  heart.style.animationDuration = (5 + Math.random() * 4) + "s";
+  // slow smooth speed
+  heart.style.animationDuration = (6 + Math.random() * 5) + "s";
 
   document.body.appendChild(heart);
 
   // remove after animation
   setTimeout(() => {
     heart.remove();
-  }, 9000);
+  }, 12000);
 }
 
-// create hearts continuously
-setInterval(createHeart, 700);
+// continuous hearts (like earlier style)
+setInterval(createHeart, 500);
+
 
