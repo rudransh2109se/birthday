@@ -26,35 +26,25 @@ window.onload = () => {
   setInterval(() => createBalloons(5), 3000);
 };
 
-function createHeart() {
-  const heart = document.createElement("div");
-  heart.className = "heart";
-  heart.innerHTML = "❤️";
+window.onload = function () {
 
-  // true random across screen width
-  const x = Math.random() * window.innerWidth;
-  heart.style.left = x + "px";
+  function createHeart() {
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "❤️";
 
-  // slow smooth speed
-  heart.style.animationDuration = (6 + Math.random() * 4) + "s";
+    const x = Math.random() * window.innerWidth;
+    heart.style.left = x + "px";
+    heart.style.animationDuration = (6 + Math.random() * 4) + "s";
 
-  document.body.appendChild(heart);
+    document.body.appendChild(heart);
 
-  // remove after animation
-  setTimeout(() => {
-    heart.remove();
-  }, 12000);
-}
+    setTimeout(() => {
+      heart.remove();
+    }, 12000);
+  }
 
-// continuous hearts like earlier style
-setInterval(createHeart, 500);
+  // start continuous hearts
+  setInterval(createHeart, 500);
 
-const testHeart = document.createElement("div");
-testHeart.innerHTML = "❤️";
-testHeart.style.position = "fixed";
-testHeart.style.bottom = "0px";
-testHeart.style.left = "50%";
-testHeart.style.fontSize = "40px";
-testHeart.style.animation = "floatUp 5s linear forwards";
-
-document.body.appendChild(testHeart);
+};
