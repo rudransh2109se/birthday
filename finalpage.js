@@ -25,9 +25,25 @@ window.onload = () => {
   setInterval(() => createBalloons(5), 3000);
 };
 
-const heart = document.createElement("div");
-heart.className = "heart";
-heart.innerHTML = "❤️";
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = "❤️";
 
-document.body.appendChild(heart);
+  // random horizontal position
+  heart.style.left = Math.random() * 100 + "vw";
+
+  // random speed
+  heart.style.animationDuration = (5 + Math.random() * 4) + "s";
+
+  document.body.appendChild(heart);
+
+  // remove after animation
+  setTimeout(() => {
+    heart.remove();
+  }, 9000);
+}
+
+// create hearts continuously
+setInterval(createHeart, 700);
 
