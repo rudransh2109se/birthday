@@ -30,12 +30,12 @@ function createHeart() {
   heart.className = "heart";
   heart.innerHTML = "❤️";
 
-  // TRUE random across full screen width
+  // true random across screen width
   const x = Math.random() * window.innerWidth;
   heart.style.left = x + "px";
 
   // slow smooth speed
-  heart.style.animationDuration = (6 + Math.random() * 5) + "s";
+  heart.style.animationDuration = (6 + Math.random() * 4) + "s";
 
   document.body.appendChild(heart);
 
@@ -45,7 +45,6 @@ function createHeart() {
   }, 12000);
 }
 
-// continuous hearts (like earlier style)
+// continuous hearts like earlier style
 setInterval(createHeart, 500);
-
 
