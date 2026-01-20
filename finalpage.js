@@ -23,8 +23,7 @@ window.onload = function () {
     }
   }
 
-  // start balloons
-  createBalloons(20);
+  createBalloons(15);
   setInterval(() => createBalloons(5), 3000);
 
 
@@ -44,7 +43,6 @@ window.onload = function () {
     setTimeout(() => heart.remove(), 12000);
   }
 
-  // start hearts
   setInterval(createHeart, 500);
 
 };
