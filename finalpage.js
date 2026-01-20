@@ -30,24 +30,29 @@ window.onload = function () {
 
   const heart = document.createElement("div");
   heart.innerHTML = "❤️";
-  heart.style.position = "fixed";
+  heart.style.position = "absolute";
   heart.style.bottom = "-40px";
   heart.style.left = "50%";
   heart.style.fontSize = "40px";
-  heart.style.zIndex = "9999";
+  heart.style.zIndex = "999999";
 
-  document.body.appendChild(heart);
+  // attach DIRECTLY to <html>, not body
+  document.documentElement.appendChild(heart);
 
   let pos = -40;
 
-  const anim = setInterval(() => {
-    pos += 3;                 // move up
+  function move() {
+    pos += 2;
     heart.style.bottom = pos + "px";
 
-    if (pos > window.innerHeight) {
-      clearInterval(anim);
+    if (pos < window.innerHeight + 50) {
+      requestAnimationFrame(move);
+    } else {
       heart.remove();
     }
-  }, 16); // ~60fps
+  }
+
+  move();
 };
+
 
