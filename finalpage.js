@@ -48,3 +48,12 @@ function createHeart() {
 // continuous hearts like earlier style
 setInterval(createHeart, 500);
 
+const testHeart = document.createElement("div");
+testHeart.innerHTML = "❤️";
+testHeart.style.position = "fixed";
+testHeart.style.bottom = "0px";
+testHeart.style.left = "50%";
+testHeart.style.fontSize = "40px";
+testHeart.style.animation = "floatUp 5s linear forwards";
+
+document.body.appendChild(testHeart);
