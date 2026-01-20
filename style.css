@@ -61,30 +61,6 @@ h1 {
 }
 
 
-.heart {
-  position: fixed;
-  bottom: -30px;
-  font-size: 22px;
-  pointer-events: none;
-  animation-name: floatUp;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-  z-index: 9999;
-}
-
-@keyframes floatUp {
-  from {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  to {
-    transform: translateY(-120vh);
-    opacity: 0;
-  }
-}
-
-
-
 
 
 
@@ -305,21 +281,11 @@ body {
 
 
 
-/* HEART TEST */
-.heart {
-  position: fixed;
-  bottom: -20px;
-  font-size: 20px;          /* small hearts like before */
-  animation-name: floatUp;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-  z-index: 9999;
-  pointer-events: none;
-}
 
 
+/* === FIX VIEWPORT COORDINATE SYSTEM FOR ANIMATIONS === */
 
-@keyframes floatUp {
+@keyframes moveUp {
   from {
     transform: translateY(0);
     opacity: 1;
@@ -329,10 +295,16 @@ body {
     opacity: 0;
   }
 }
+.heart {
+  position: fixed;
+  bottom: -30px;
+  font-size: 22px;
+  pointer-events: none;
+  animation: floatUp linear forwards;
+  z-index: 9999;
+}
 
-/* === FIX VIEWPORT COORDINATE SYSTEM FOR ANIMATIONS === */
-
-@keyframes moveUp {
+@keyframes floatUp {
   from {
     transform: translateY(0);
     opacity: 1;
