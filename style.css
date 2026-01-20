@@ -18,12 +18,19 @@ body {
   overflow: auto;
 }
 /* CENTER COUNTDOWN PAGE CONTENT ONLY */
-#countdown-container {
-  min-height: 100vh;
+/* FORCE CENTER COUNTDOWN PAGE */
+.countdown-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .birthday-message {
   position: absolute;
   top: 30%;
