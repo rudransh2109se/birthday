@@ -1,5 +1,5 @@
 // --- 1. CONFIGURATION ---
-const targetDate = new Date("February 6, 2026 11:41:00").getTime();
+const targetDate = new Date("February 11, 2026 00:00:00").getTime();
 const correctPassword = "17 december";
 
 // --- 2. DYNAMIC BACKGROUND (STARFIELD) ---
@@ -359,3 +359,4 @@ function triggerBirthdayReveal() {
     setTimeout(() => flash.style.opacity = '0', 600);
     setTimeout(() => flash.remove(), 1200);
 }
+
