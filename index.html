@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Favorite Person ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Pacifico&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Immersive Background System -->
+    <div class="bg-wrapper">
+        <canvas id="star-canvas"></canvas>
+        <div class="blob-container">
+            <div class="blob b1"></div>
+            <div class="blob b2"></div>
+            <div class="blob b3"></div>
+        </div>
+    </div>
+
+    <div id="app">
+        <!-- 1. Countdown Section (3D Card) -->
+        <section id="countdown-section" class="active">
+            <div class="tilt-box" id="countdown-tilt">
+                <div class="glass-container">
+                    <div class="floating-avatars">
+                        <img src="assets/panda.png" alt="Panda" class="avatar p1">
+                        <img src="assets/teddy.png" alt="Teddy" class="avatar t1">
+                    </div>
+                    <div class="shimmer-text">
+                        <h1 id="dynamic-text" class="wow-text">Counting every second until your smile ❤️</h1>
+                    </div>
+                    <div id="countdown-timer" class="wow-timer">
+                        <div class="t-unit"><span id="days">00</span><label>Days</label></div>
+                        <div class="t-unit"><span id="hours">00</span><label>Hours</label></div>
+                        <div class="t-unit"><span id="minutes">00</span><label>Mins</label></div>
+                        <div class="t-unit"><span id="seconds">00</span><label>Secs</label></div>
+                    </div>
+                    <div class="luxury-badge">Coming Soon: 11 February</div>
+                </div>
+            </div>
+
+            <div id="unlock-container" class="hidden">
+                <div class="heart-lock-wrapper">
+                    <div id="heart-lock" class="glow-heart-btn">
+                        <span class="heart-icon">❤️</span>
+                        <span class="btn-text">Unlock Your Surprise</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Password Section (Neo-Glass) -->
+        <section id="password-section" class="hidden">
+            <div class="tilt-box" id="password-tilt">
+                <div class="glass-container compact">
+                    <h2 class="wow-text">A Secret Between Us 🔐</h2>
+                    <p class="hint-italic">Hint: The date of our first hug with the month.</p>
+                    <div class="magical-input">
+                        <input type="text" id="password-input" placeholder="Whisper the code..." autocomplete="off">
+                        <div class="input-glow"></div>
+                    </div>
+                    <button id="password-submit" class="magnetic-btn">Unlock 💖</button>
+                    <div id="password-error" class="error-shake"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Final Celebration Section (Immersive Overlay) -->
+        <section id="celebration-section" class="hidden">
+            <div class="full-viewer">
+                <div class="hero-header" id="celebration-tilt">
+                    <div class="avatar-pair pulse-entrance">
+                        <img src="assets/your-photo.png" alt="You" class="hero-img left">
+                        <div class="beating-heart-main">❤️</div>
+                        <img src="assets/her-photo.png" alt="Prachi" class="hero-img right">
+                    </div>
+                    <h1 class="grand-title slide-up-entrance">Happy Birthday My Forever wala LOVE! 💖</h1>
+                </div>
+
+                <div class="scroll-container slide-up-entrance delay-1">
+                    <div class="letter-card">
+                        <div class="letter-inner">
+                            <p>From the moment I met you, life felt like it got a little brighter, thoda colorful, thoda
+                                magical. You have this way of turning the ordinary into extraordinary, just by being
+                                yourself. I love how you laugh—wo laugh jo seedha dil ko chu jaata hai—and how your
+                                smile can make even the dullest day feel like sunshine. You’re not just beautiful,
+                                Prachi, you’re the kind of person whose presence fills a room, whose kindness touches
+                                hearts, aur jisse dekh kar lagta hai ki duniya sach mein achi jagah hai.</p>
+                            <p>Every little thing about you fascinates me. The way you talk about your day, the way you
+                                care for me, the way you tease me sometimes—sab kuch perfect hai about you. Life with
+                                you feels like this perfect balance of adventure and peace, aur honestly, i dont know
+                                how i got so lucky to have you in my life.</p>
+                            <p>I want you to know ki hum hamesha yahi chahta hai ki tum khush rahe. Tumhara happiness
+                                mera priority hai, aur hum hamesha uss smile ke peeche khada rahega jo mereko itna
+                                inspire karta hai. Har moment with you is like a treasure—chote chote jokes, random
+                                late-night talks, or even the quiet moments jab bas humlog dono saath mein call mein
+                                hote hai. Tumhara har baat mujhe yaad rahta hai, aur hum shayad kabhi express nahi kar
+                                paata, lekin sach mein, tum meri duniya ho, aur tumhare bina hum incomplete hai.</p>
+                            <p>On your birthday, I want to promise you ki hum hamesha tumhare saath rahega, har ups and
+                                downs mein, har laughter aur tears mein. Hum chahta hai ki humlog dono ek saath grow
+                                karein, explore karein, aur duniya ke saare experiences share karein. Tum meri
+                                inspiration ho, Prachi, aur tum meri life ki sabse beautiful chapter ho. I love your
+                                heart, I love your mind, aur sabse zyada, main tumhari soul ke saath connect feel karta
+                                hoon jo sabse rare aur special hai.</p>
+                            <p>So today, let’s celebrate not just your birthday, but the amazing, incredible person you
+                                are. Tumhara existence hi life ko itna special banata hai. I hope this year brings you
+                                everything you deserve—happiness, love, laughter, aur un sab moments ka magic jo tum
+                                cherish karta hai. Thank you for being you, for making my life better, aur for just
+                                being my favorite person in the entire world.</p>
+                            <p>Happy Birthday, Prachi! You are my heart, my joy, aur meri life ka
+                                sabse special reason. I love you endlessly, aur yeh love har din badhta rahega. Cheers
+                                to you, to us, aur sab un adventures aur memories ke liye jo abhi aane wala hai! 💖🥳
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="celebration-canvases">
+                <canvas id="confetti-canvas"></canvas>
+            </div>
+        </section>
+    </div>
+
+    <!-- External Libraries (Vanilla only but for 3D tilt effect simulation) -->
+    <script src="main.js"></script>
+</body>
+
+</html>
